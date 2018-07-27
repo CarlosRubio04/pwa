@@ -8,7 +8,7 @@ import { SwUpdate } from '../../node_modules/@angular/service-worker';
 })
 export class AppComponent implements OnInit{
   title = 'app';
-
+  categorias: any = ['Trabajo', 'Personal'];
   constructor(private swUpdate:SwUpdate){
 
   }
