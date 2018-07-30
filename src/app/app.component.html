@@ -1,37 +1,6 @@
-<mat-toolbar>My App</mat-toolbar>
+<mat-toolbar color="primary">My App</mat-toolbar>
 
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Personal data
-      </mat-panel-title>
-      <mat-panel-description>
-        Type your name and age
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+{{ message | async | json}}
 
-    <mat-form-field>
-      <input matInput placeholder="Titulo de la nota">
-    </mat-form-field>
 
-    <mat-form-field>
-      <mat-select placeholder="Categoria">
-        <mat-option *ngFor="let categoria of categorias" [value]="categoria">
-          {{ categoria }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <textarea matInput placeholder="Cuerpo de la nota"></textarea>
-    </mat-form-field>
-  </mat-expansion-panel>
-</mat-accordion>
-
-<mat-list>
-  <mat-list-item>
-    <h3 matLine> Titulo </h3>
-    <p matLine> Cuerpo </p>
-    <p matLine class="demo-2"> Categoria </p>
-  </mat-list-item>
-</mat-list>
+<router-outlet></router-outlet>

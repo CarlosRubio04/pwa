@@ -21,14 +21,14 @@ export class MainService {
     * createNote Crear la nota
     */
     public createNote(note) {
-        return this.afDB.database.ref('/notes' + note.id).set(note);
+        return this.afDB.database.ref('/notes/' + note.id).set(note);
     }
 
     /**
     * editNote Editar la nota
     */
     public editNote(note) {
-        return this.afDB.database.ref('/notes' + note.id).set(note);
+        return this.afDB.database.ref('/notes/' + note.id).set(note);
     }
      /**
     * deleteNote Eliminar la nota
